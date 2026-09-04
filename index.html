@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061226" />
+  <meta name="description" content="DoctorBot — assistentes virtuais, telefonia inteligente e integrações para transformar o atendimento da sua empresa." />
+  <title>DoctorBot | Atendimento inteligente que trabalha por você</title>
+  <link rel="icon" href="assets/doctorbot-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="header" id="topo">
+    <div class="container nav">
+      <a class="brand" href="#topo" aria-label="DoctorBot">
+        <img src="assets/doctorbot-logo.png" alt="DoctorBot" />
+        <span>doctor<span>bot</span></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="nav-links">
+        <a href="#solucoes">Soluções</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#integracoes">Integrações</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn-small btn-primary nav-cta" href="#contato">Falar com especialista <span>→</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse"></span> Atendimento inteligente • 24/7</div>
+          <h1>Seu atendimento pode ser <span>mais rápido, inteligente e escalável.</span></h1>
+          <p class="hero-text">
+            Assistentes virtuais, telefonia com IA e integrações que conectam seus canais aos sistemas que sua empresa já utiliza.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contato">Quero transformar meu atendimento <span>→</span></a>
+            <a class="btn btn-ghost" href="#solucoes">Conhecer soluções <span>↓</span></a>
+          </div>
+
+          <div class="trust-row">
+            <div><strong>24/7</strong><small>Atendimento contínuo</small></div>
+            <div><strong>IA</strong><small>Conversas naturais</small></div>
+            <div><strong>API</strong><small>Integrações sob medida</small></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="assistant-card">
+            <div class="card-top">
+              <div class="avatar">DB</div>
+              <div>
+                <strong>DoctorBot</strong>
+                <span><i></i> Assistente online</span>
+              </div>
+              <span class="dots">•••</span>
+            </div>
+
+            <div class="chat">
+              <div class="message bot">Olá! 👋 Como posso ajudar sua empresa hoje?</div>
+              <div class="message user">Quero agendar um atendimento.</div>
+              <div class="message bot">Claro. Vou verificar os horários disponíveis para você.</div>
+              <div class="typing"><span></span><span></span><span></span></div>
+            </div>
+
+            <div class="card-bottom">
+              <span>Assistente conectado</span>
+              <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="floating-pill pill-whatsapp">◉ WhatsApp conectado</div>
+          <div class="floating-pill pill-phone">◉ Telefonia com IA</div>
+          <div class="floating-pill pill-api">◉ API + Webhooks</div>
+        </div>
+      </div>
+      <div class="scroll-hint">role para descobrir <span>↓</span></div>
+    </section>
+
+    <section class="section intro" id="solucoes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">O ecossistema DoctorBot</span>
+          <h2>Não é só um chatbot.<br><span>É uma nova camada para sua operação.</span></h2>
+          <p>Automatize o que é repetitivo, acelere o que é importante e deixe sua equipe focada no que realmente precisa de pessoas.</p>
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card featured reveal">
+            <div class="icon">✦</div>
+            <span class="card-number">01</span>
+            <h3>Assistentes Virtuais</h3>
+            <p>Agentes de IA que conversam naturalmente, entendem intenção, coletam dados, qualificam contatos, tiram dúvidas e encaminham cada pessoa para o próximo passo.</p>
+            <ul>
+              <li>WhatsApp e canais digitais</li>
+              <li>Atendimento 24 horas</li>
+              <li>Handoff para equipe humana</li>
+            </ul>
+            <a href="#contato">Quero um assistente <span>→</span></a>
+          </article>
+
+          <article class="solution-card reveal">
+            <div class="icon">⌁</div>
+            <span class="card-number">02</span>
+            <h3>Telefonia Inteligente</h3>
+            <p>Transforme seu telefone em um canal inteligente com atendimento automatizado, triagem, roteamento e transferência para sua equipe.</p>
+            <ul>
+              <li>Voicebots com IA</li>
+              <li>Filas e roteamento</li>
+              <li>Resumo das ligações</li>
+            </ul>
+            <a href="#contato">Conhecer telefonia <span>→</span></a>
+          </article>
+
+          <article class="solution-card reveal">
+            <div class="icon">↗</div>
+            <span class="card-number">03</span>
+            <h3>Integrações</h3>
+            <p>Conecte WhatsApp, telefonia, CRM, ERP, agendas, sistemas de gestão e APIs para fazer os dados circularem automaticamente.</p>
+            <ul>
+              <li>APIs e Webhooks</li>
+              <li>n8n e automações</li>
+              <li>Projetos sob medida</li>
+            </ul>
+            <a href="#integracoes">Ver integrações <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="como-funciona">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">Do primeiro contato à conversão</span>
+          <h2>Seu atendimento funcionando<br><span>como uma operação inteligente.</span></h2>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span>01</span>
+            <div class="step-icon">◌</div>
+            <h3>Entende</h3>
+            <p>A IA interpreta a intenção do cliente em linguagem natural.</p>
+          </div>
+          <div class="step-line"></div>
+          <div class="step reveal">
+            <span>02</span>
+            <div class="step-icon">⌁</div>
+            <h3>Executa</h3>
+            <p>Consulta sistemas, agenda, registra dados e dispara automações.</p>
+          </div>
+          <div class="step-line"></div>
+          <div class="step reveal">
+            <span>03</span>
+            <div class="step-icon">↗</div>
+            <h3>Conecta</h3>
+            <p>Entrega o contexto certo para a equipe quando o humano entra.</p>
+          </div>
+          <div class="step-line"></div>
+          <div class="step reveal">
+            <span>04</span>
+            <div class="step-icon">✦</div>
+            <h3>Converte</h3>
+            <p>Menos espera, menos abandono e mais oportunidades aproveitadas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section integrations" id="integracoes">
+      <div class="container integrations-grid">
+        <div class="integration-copy reveal">
+          <span class="eyebrow">Conecte o que você já usa</span>
+          <h2>Seus sistemas não precisam ficar <span>isolados.</span></h2>
+          <p>O DoctorBot funciona como uma ponte entre seus canais de atendimento e a sua operação. Quando houver API, webhook ou uma necessidade específica, desenhamos a integração.</p>
+          <a class="btn btn-primary" href="#contato">Falar sobre uma integração <span>→</span></a>
+        </div>
+
+        <div class="integration-cloud reveal">
+          <div class="connector center">DoctorBot</div>
+          <div class="connector c1">WhatsApp</div>
+          <div class="connector c2">Telefonia</div>
+          <div class="connector c3">CRM</div>
+          <div class="connector c4">ERP</div>
+          <div class="connector c5">Agenda</div>
+          <div class="connector c6">API</div>
+          <div class="connector c7">n8n</div>
+          <div class="connector c8">Webhooks</div>
+          <svg viewBox="0 0 500 500" aria-hidden="true">
+            <circle cx="250" cy="250" r="125"></circle>
+            <circle cx="250" cy="250" r="200"></circle>
+            <path d="M250 125 L250 35 M375 250 L465 250 M250 375 L250 465 M125 250 L35 250 M338 162 L402 98 M338 338 L402 402 M162 338 L98 402 M162 162 L98 98"></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results" id="resultados">
+      <div class="container">
+        <div class="results-panel reveal">
+          <div class="results-copy">
+            <span class="eyebrow">Mais controle. Menos operação manual.</span>
+            <h2>Transforme conversas em <span>dados e resultados.</span></h2>
+            <p>Tenha visibilidade do que acontece nos seus canais: volume de contatos, tempo de atendimento, conversão, horários de pico e principais demandas.</p>
+            <div class="result-checks">
+              <div>✓ Histórico das interações</div>
+              <div>✓ Indicadores operacionais</div>
+              <div>✓ Jornada rastreável</div>
+              <div>✓ Melhoria contínua dos fluxos</div>
+            </div>
+          </div>
+          <div class="dashboard">
+            <div class="dash-header"><strong>Visão da operação</strong><span>● Ao vivo</span></div>
+            <div class="metric-row">
+              <div><small>Atendimentos</small><strong>1.284</strong><em>+18,4%</em></div>
+              <div><small>Conversão</small><strong>42,8%</strong><em>+7,2%</em></div>
+            </div>
+            <div class="chart">
+              <div class="chart-label">Volume de atendimentos</div>
+              <div class="bars"><i style="height:32%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:67%"></i><i style="height:54%"></i><i style="height:78%"></i><i style="height:92%"></i><i style="height:72%"></i><i style="height:86%"></i><i style="height:100%"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section segments">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">Feito para operações que precisam escalar</span>
+          <h2>Onde o atendimento precisa <span>funcionar melhor.</span></h2>
+        </div>
+        <div class="segment-grid">
+          <div class="segment reveal"><span>✚</span><h3>Saúde</h3><p>Clínicas, centros de diagnóstico e hospitais.</p></div>
+          <div class="segment reveal"><span>◉</span><h3>Serviços</h3><p>Empresas que recebem alto volume de contatos.</p></div>
+          <div class="segment reveal"><span>◆</span><h3>Comercial</h3><p>Qualificação e distribuição de oportunidades.</p></div>
+          <div class="segment reveal"><span>▣</span><h3>Operações</h3><p>Processos internos que podem ser automatizados.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2>Antes de começar, <span>vamos esclarecer.</span></h2>
+          <p>Se a sua dúvida não estiver aqui, nossa equipe pode avaliar sua operação e indicar o melhor caminho.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details open>
+            <summary>O DoctorBot substitui minha equipe?</summary>
+            <p>Não. A proposta é automatizar tarefas repetitivas e dar contexto para sua equipe. Quando uma decisão humana é necessária, o atendimento pode ser transferido.</p>
+          </details>
+          <details>
+            <summary>Funciona com WhatsApp?</summary>
+            <p>Sim. A arquitetura pode trabalhar com WhatsApp Business e outros canais, de acordo com a configuração da sua operação.</p>
+          </details>
+          <details>
+            <summary>Consigo integrar com meu sistema?</summary>
+            <p>Sim. Avaliamos APIs, webhooks, bancos de dados e conectores disponíveis. Também podemos desenvolver uma integração sob medida.</p>
+          </details>
+          <details>
+            <summary>Posso usar IA também na telefonia?</summary>
+            <p>Sim. A solução pode incluir voz, triagem, roteamento, transferência e automações associadas ao atendimento telefônico.</p>
+          </details>
+          <details>
+            <summary>Preciso trocar os sistemas que já uso?</summary>
+            <p>Não necessariamente. A ideia é conectar o DoctorBot ao ecossistema que já funciona para sua empresa.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contato">
+      <div class="container cta-box reveal">
+        <div>
+          <span class="eyebrow">Pronto para dar o próximo passo?</span>
+          <h2>Vamos descobrir onde a IA pode <span>gerar resultado na sua operação.</span></h2>
+          <p>Conte rapidamente como funciona seu atendimento. A gente avalia os canais, sistemas e oportunidades de automação.</p>
+        </div>
+        <div class="cta-actions">
+          <!-- TROQUE O LINK ABAIXO PELO WHATSAPP COMERCIAL -->
+          <a class="btn btn-primary btn-large" href="https://wa.me/5500000000000?text=Olá%20DoctorBot!%20Quero%20conhecer%20as%20soluções." target="_blank" rel="noopener">Falar pelo WhatsApp <span>→</span></a>
+          <a class="btn btn-light" href="mailto:contato@doctorbot.com.br?subject=Quero%20conhecer%20a%20DoctorBot">Enviar e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#topo"><img src="assets/doctorbot-logo.png" alt="" /><span>doctor<span>bot</span></span></a>
+        <p>Assistentes virtuais, telefonia inteligente e integrações para uma operação de atendimento mais eficiente.</p>
+      </div>
+      <div>
+        <strong>Soluções</strong>
+        <a href="#solucoes">Assistentes Virtuais</a>
+        <a href="#solucoes">Telefonia Inteligente</a>
+        <a href="#integracoes">Integrações</a>
+      </div>
+      <div>
+        <strong>Empresa</strong>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#faq">Perguntas frequentes</a>
+      </div>
+      <div>
+        <strong>Contato</strong>
+        <a href="#contato">Falar com especialista</a>
+        <a href="mailto:contato@doctorbot.com.br">contato@doctorbot.com.br</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 DoctorBot. Todos os direitos reservados.</span>
+      <span>Atendimento inteligente para empresas.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
