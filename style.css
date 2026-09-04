@@ -111,3 +111,394 @@ footer{background:#030914;border-top:1px solid var(--line);padding:65px 0 25px}.
   .hero-visual{min-height:470px}.assistant-card{min-height:410px}.floating-pill{font-size:8px}.pill-whatsapp{left:0}.pill-api{left:0}.pill-phone{right:0}
   .section{padding:85px 0}.section-heading h2,.integration-copy h2,.results-copy h2{font-size:38px}.solution-card{min-height:430px}.results-panel{padding:35px 25px;gap:35px}.result-checks{grid-template-columns:1fr}.integration-cloud{height:420px}.connector{font-size:9px;padding:10px}.connector.center{width:95px;height:95px}.cta-box{padding:38px 25px}.cta-box h2{font-size:34px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:7px}.segment-grid{grid-template-columns:1fr}.faq-grid{gap:45px}
 }
+/* =========================================================
+   BOTÕES FLUTUANTES - WHATSAPP + CHAT IA
+   ========================================================= */
+
+.floating-contact{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:9998;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Botão geral */
+
+.floating-btn{
+  border:1px solid rgba(255,255,255,.13);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:11px 15px;
+  border-radius:999px;
+  color:#fff;
+  font-family:Inter,Arial,sans-serif;
+  font-size:11px;
+  font-weight:800;
+  text-decoration:none;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.floating-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.45),
+    0 0 30px rgba(0,190,255,.12);
+}
+
+/* Ícone */
+
+.floating-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:14px;
+}
+
+/* WhatsApp */
+
+.whatsapp-btn{
+  background:rgba(5,30,24,.92);
+  border-color:rgba(37,211,102,.28);
+}
+
+.whatsapp-btn .floating-icon{
+  background:#25d366;
+  color:#032c16;
+  box-shadow:0 0 20px rgba(37,211,102,.25);
+}
+
+/* Chatbot */
+
+.chatbot-btn{
+  background:linear-gradient(
+    135deg,
+    rgba(15,48,86,.96),
+    rgba(7,24,47,.96)
+  );
+  border-color:rgba(0,199,255,.3);
+}
+
+.chatbot-btn .floating-icon{
+  background:linear-gradient(
+    135deg,
+    var(--blue),
+    var(--cyan)
+  );
+  color:#001124;
+  box-shadow:0 0 22px rgba(0,199,255,.3);
+}
+
+/* Pequena animação no botão do Chat */
+
+.chatbot-btn::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:999px;
+  border:1px solid rgba(0,199,255,.22);
+  animation:chatPulse 2.4s infinite;
+  pointer-events:none;
+}
+
+@keyframes chatPulse{
+  0%{
+    transform:scale(1);
+    opacity:.65;
+  }
+
+  70%{
+    transform:scale(1.08);
+    opacity:0;
+  }
+
+  100%{
+    transform:scale(1.08);
+    opacity:0;
+  }
+}
+
+
+/* =========================================================
+   OVERLAY DO CHATBOT
+   ========================================================= */
+
+.chatbot-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+
+  padding:24px;
+
+  background:rgba(0,0,0,.28);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease;
+}
+
+.chatbot-overlay.active{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+
+/* =========================================================
+   JANELA
+   ========================================================= */
+
+.chatbot-window{
+  width:min(430px,100%);
+  height:min(700px,calc(100vh - 48px));
+
+  display:flex;
+  flex-direction:column;
+
+  overflow:hidden;
+
+  background:#061226;
+
+  border:1px solid rgba(150,195,235,.18);
+  border-radius:22px;
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.55),
+    0 0 70px rgba(0,130,255,.12);
+
+  transform:
+    translateY(25px)
+    scale(.97);
+
+  opacity:0;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.chatbot-overlay.active .chatbot-window{
+  transform:translateY(0) scale(1);
+  opacity:1;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CHAT
+   ========================================================= */
+
+.chatbot-header{
+  height:72px;
+  min-height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14,39,70,.98),
+      rgba(5,18,37,.98)
+    );
+
+  border-bottom:1px solid rgba(155,184,220,.12);
+}
+
+.chatbot-brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+
+.chatbot-avatar{
+  width:40px;
+  height:40px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--cyan)
+    );
+
+  color:#001124;
+
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:800;
+  font-size:12px;
+
+  box-shadow:
+    0 8px 25px rgba(0,170,255,.2);
+}
+
+.chatbot-brand strong{
+  display:block;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:14px;
+}
+
+.chatbot-brand span{
+  display:block;
+  margin-top:2px;
+
+  color:#7e9bb8;
+  font-size:9px;
+}
+
+.chatbot-brand span i{
+  display:inline-block;
+
+  width:6px;
+  height:6px;
+
+  margin-right:4px;
+
+  border-radius:50%;
+
+  background:#25db9a;
+  box-shadow:0 0 8px rgba(37,219,154,.45);
+}
+
+
+/* =========================================================
+   BOTÃO FECHAR
+   ========================================================= */
+
+.chatbot-close{
+  width:36px;
+  height:36px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
+
+  background:rgba(255,255,255,.04);
+
+  color:#b7c8db;
+
+  font-size:25px;
+  font-weight:300;
+
+  cursor:pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.chatbot-close:hover{
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  transform:rotate(90deg);
+}
+
+
+/* =========================================================
+   CONTEÚDO / TYPEBOT
+   ========================================================= */
+
+.chatbot-content{
+  flex:1;
+  min-height:0;
+  background:#fff;
+}
+
+.chatbot-content iframe{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  border:0;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media(max-width:600px){
+
+  .floating-contact{
+    right:14px;
+    bottom:14px;
+    gap:8px;
+  }
+
+  .floating-btn{
+    width:52px;
+    height:52px;
+
+    padding:0;
+
+    justify-content:center;
+
+    border-radius:50%;
+  }
+
+  .floating-label{
+    display:none;
+  }
+
+  .floating-icon{
+    width:34px;
+    height:34px;
+    font-size:15px;
+  }
+
+  .chatbot-overlay{
+    padding:0;
+    align-items:stretch;
+  }
+
+  .chatbot-window{
+    width:100%;
+    height:100%;
+    max-height:none;
+
+    border-radius:0;
+    border:0;
+  }
+
+  .chatbot-header{
+    height:64px;
+    min-height:64px;
+  }
+
+}
