@@ -333,6 +333,95 @@
     </div>
   </footer>
 
+  <!-- BOTÕES FLUTUANTES -->
+  <div class="floating-contact">
+
+    <!-- WhatsApp -->
+    <a
+      class="floating-btn whatsapp-btn"
+      href="https://wa.me/5511914244489?text=Ol%C3%A1%20DoctorBot!%20Vim%20pelo%20site%20e%20gostaria%20de%20conhecer%20as%20solu%C3%A7%C3%B5es."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com a DoctorBot pelo WhatsApp"
+    >
+      <span class="floating-icon">◉</span>
+      <span class="floating-label">WhatsApp</span>
+    </a>
+
+    <!-- Chatbot -->
+    <button
+      class="floating-btn chatbot-btn"
+      id="openChatbot"
+      type="button"
+      aria-label="Abrir Chat IA"
+      aria-expanded="false"
+    >
+      <span class="floating-icon">✦</span>
+      <span class="floating-label">Chat IA</span>
+    </button>
+
+  </div>
+
+  <!-- JANELA DO CHATBOT -->
+  <div
+    class="chatbot-overlay"
+    id="chatbotOverlay"
+    aria-hidden="true"
+  >
+
+    <div
+      class="chatbot-window"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="chatbotTitle"
+    >
+
+      <div class="chatbot-header">
+
+        <div class="chatbot-brand">
+
+          <div class="chatbot-avatar">
+            DB
+          </div>
+
+          <div>
+            <strong id="chatbotTitle">DoctorBot</strong>
+
+            <span>
+              <i></i>
+              Assistente online
+            </span>
+          </div>
+
+        </div>
+
+        <button
+          class="chatbot-close"
+          id="closeChatbot"
+          type="button"
+          aria-label="Fechar Chat IA"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div class="chatbot-content">
+
+        <iframe
+          id="doctorbotFrame"
+          src="https://typebotviewer.tangoservicos.com/doctorbot-r5"
+          title="Chatbot DoctorBot"
+          loading="lazy"
+          allow="microphone; camera; clipboard-write"
+        ></iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
